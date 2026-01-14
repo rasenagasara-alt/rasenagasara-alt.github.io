@@ -1,0 +1,170 @@
+/* Tizim shriftlari */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #000000e0;
+    overflow-x: hidden;
+    line-height: 1.5715;
+}
+
+/* ANIMATSIYA */
+@keyframes wind-fall {
+    0% { transform: translate(0, -15vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translate(40vw, 110vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.falling-item {
+    position: fixed;
+    top: -15vh;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    will-change: transform;
+}
+
+/* Orqaga tugmasi */
+.ant-btn-back {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #000000e0;
+}
+
+.ant-btn-back:hover {
+    color: #4096ff;
+    border-color: #4096ff;
+}
+
+/* Slot tugmalari */
+.slot-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: all 0.2s;
+    border: 1px solid #d9d9d9;
+    background: white;
+    color: #000000e0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.slot-active {
+    background: white !important;
+    color: #000000e0 !important;
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+}
+
+.slot-btn:hover:not(.slot-active) {
+    color: #4096ff;
+    border-color: #4096ff;
+}
+
+/* Radio tugmalar */
+.custom-radio {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.custom-radio:hover {
+    border-color: #1677ff;
+}
+
+.custom-radio:checked {
+    border-color: #1677ff;
+    background-color: #fff;
+}
+
+.custom-radio:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1677ff;
+}
+
+/* Header & Cards */
+.header-clean {
+    background: #fff;
+}
+
+.question-card {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.question-text-style {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000e0;
+    line-height: 1.5715;
+    margin-bottom: 8px;
+}
+
+/* Qidiruv tugmasi */
+.stealth-search-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 40;
+    opacity: 0.0;
+    transition: all 0.3s ease;
+    border: 1px solid #d9d9d9;
+    color: #555;
+}
+
+.stealth-search-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    border-color: #1677ff;
+    color: #1677ff;
+}
+
+/* HIMOYA: Screen Lock */
+.security-lockdown {
+    filter: blur(15px) brightness(100) contrast(0) !important;
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    transition: none;
+}
